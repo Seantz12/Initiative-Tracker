@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_create_turn_order"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.sean.initiativetracker.CreateTurnOrder">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/name"
+        android:src="@drawable/fighters"/>
+
+    <EditText
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Character's Name"
+        android:ems="10"
+        android:id="@+id/name"
+        android:selectAllOnFocus="false"
+        android:maxLength="24"
+        android:textSize="15dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+/>
+
+    <EditText
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:text="1"
+        android:ems="10"
+        android:id="@+id/score"
+        android:textSize="15dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="66dp"
+        android:layout_marginEnd="66dp"
+        android:background="@android:color/transparent"/>
+
+    <EditText
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:inputType="number|numberSigned"
+        android:text="0"
+        android:ems="10"
+        android:id="@+id/mod"
+        android:textSize="15dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@android:color/transparent"/>
+
+    <TextView
+        android:text="Base Roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/baseRoll"
+        android:textSize="12dp"
+        android:layout_below="@+id/name"
+        android:layout_alignLeft="@+id/score"
+        android:layout_alignStart="@+id/score" />
+
+    <TextView
+        android:text="Initiative Modifier"
+        android:textSize="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/baseRoll"
+        android:layout_alignLeft="@+id/mod"
+        android:layout_alignStart="@+id/mod"
+        android:id="@+id/initMod" />
+
+    <Button
+        android:text="Start Battle!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/startBattle"
+        android:onClick="startBattle"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Modify Characters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/modChar"
+        android:onClick="modChar"
+        android:layout_above="@+id/startBattle"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Add Character"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addChar"
+        android:onClick="addChar"
+        android:layout_above="@+id/modChar"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <!--
+    Uncertain if this or typing in scores is better
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listScores"
+        android:layout_above="@+id/score"
+        android:layout_toRightOf="@+id/name"
+        android:layout_toEndOf="@+id/name" />
+    -->
+
+</RelativeLayout>
